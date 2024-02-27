@@ -1,10 +1,10 @@
+@import "_variables";
 #hero {
   display: flex;
   position: relative;
   top: 0;
   width: 100%;
   height: 100vh;
-
   &::before {
     content: "";
     position: absolute;
@@ -19,12 +19,40 @@
     background-position: 1% 0px;
     clip-path: polygon(30% 0, 100% 0, 100% 100%, 0% 100%);
   }
-
   &::after{
     content: "";
     position: absolute;
     inset: 0;
     z-index: -1;
-    background-color: rgba(55, 69, 52, 0.44);
+    background-color: rgba(55, 69, 52, 0.7);
+  }
+  >div{
+    width: 50%;
+    padding: 1rem 3rem;
+  }
+  #hero-right {
+    display: flex;
+    align-items:center;
+    h1 {
+      color: white;
+      font-size: 9rem;
+      font-family: SwissraCondensedBold, sans-serif;
+      &::after{
+        content: '7';
+        color: $red;
+        position: absolute;
+        transform: translateY(30px);
+      }
+    }
+    p{
+      color: white;
+      font-family: SwissraCondensedLight, sans-serif;
+      font-size: 1.2rem;
+      max-width: min(550px , 70%);
+    }
+    .btn   {
+      margin-top: 1rem;
+      padding: .7rem 3rem;
+    }
   }
 }

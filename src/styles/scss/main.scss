@@ -1,3 +1,12 @@
+@import "_variables";
+@font-face {
+  font-family: SwissraCondensedLight;
+  src: url("./src/fonts/SwissraCondensed-Light _.ttf") format('truetype');
+}
+@font-face {
+  font-family: SwissraCondensedBold;
+  src: url("./src/fonts/SwissraCondensed-Bold _.ttf") format('truetype');
+}
 * {
   margin: 0;
   box-sizing: border-box;
@@ -11,3 +20,20 @@ p {
 body {
   background: #212721;
 }
+.btn {
+  padding: .7rem 2rem;
+  border: 1px solid rgba(255,255,255,.5);
+  background-color: rgba(255,255,255,.1);
+  color: white;
+  cursor: pointer;
+  transition: all ease-in-out .5s;
+  border-radius: 0;
+  &:hover {
+    border: 1px solid rgba(255,255,255,1);
+    background: white;
+    color: $primary;
+    border-radius: $border-radius;
+  }
+}
+@import "navbar";
+@import "hero";

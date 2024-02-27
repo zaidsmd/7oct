@@ -1,4 +1,3 @@
-import '../styles/scss/navbar.scss'
 import logo from '../assets/logo.png'
 export default function Navbar () {
     let setActive = (e)=>{
